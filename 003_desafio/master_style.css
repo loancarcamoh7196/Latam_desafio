@@ -1,0 +1,24 @@
+body{
+  padding: 3rem;
+  margin: 3rem;
+  color : rgb(60, 61, 59);
+}
+p{
+  text-align: justify;
+}
+h1{
+  text-align: center;
+  margin: 1rem;
+}
+h2{
+  margin: 3rem 0;
+}
+ol li{
+  list-style-type:
+}
+
+.img-centrada{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
