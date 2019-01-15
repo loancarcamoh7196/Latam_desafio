@@ -2,5 +2,29 @@
 SELECT * FROM facilities;
 
 #Repuesta 2
-SELECT name, membercost, guestcost, initialoutlay, monthlymaintenance;
+SELECT name, membercost, guestcost, initialoutlay, monthlymaintenance
+FROM facilities;
+
+#3
+SELECT id, name, membercost 
+FROM facilities
+WHERE membercost>0
+;
+
+#4
+SELECT id, name, membercost, monthlymaintenance
+FROM facilities
+WHERE membercost < (monthlymaintenance / 50)
+;
+
+#5
+SELECT id, name, membercost, guestcost, initialoutlay, monthlymaintenance
+FROM facilities
+WHERE name LIKE '%Tennis%'
+;
+
+#6
+SELECT * 
+FROM facilities
+WHERE id IN (1,5);
 
