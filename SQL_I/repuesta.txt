@@ -1,0 +1,6 @@
+#Repuesta 1
+SELECT * FROM facilities;
+
+#Repuesta 2
+SELECT name, membercost, guestcost, initialoutlay, monthlymaintenance;
+
