@@ -1,0 +1,37 @@
+-- Lorena Carcamo Herrera
+
+-- PARTE 1
+
+--1
+CREATE DATABASE movies;
+
+--2
+\c movies;
+--3
+CREATE TABLE movie (
+  id SERIAL,
+  name VARCHAR(500)
+);
+
+--4
+INSERT INTO movie (name) VALUES ('El Rey León');
+
+--5
+INSERT INTO movie (name) VALUES ('Terminator II');
+
+--6
+ALTER TABLE movie ADD COLUMN anno VARCHAR(4);
+
+--7
+ALTER TABLE movie ADD COLUMN genero VARCHAR(30);
+
+--8
+UPDATE movie SET anno = '1984';
+
+--9
+UPDATE movie SET genero = 'Drama';
+
+--10
+DELETE movie WHERE name = 'Terminator II';
+
+--11
