@@ -46,7 +46,7 @@ GRANT SELECT ON movie TO  role_read_only ;
 
 --13
 CTRL + D
-
+psql -U usuario_prueba
 
 
 
