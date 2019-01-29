@@ -1,0 +1,36 @@
+<div class="row">
+<div class="col-lg-12">
+    <h1>Products List</h1>
+    <div>
+        <%= link_to 'New Product', new_product_path, class: 'btn btn-success' %>
+    </div>
+    <hr>
+    <table class="table table-hover ">
+        <thead class="table-info">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @products.each do |prod| %>
+                <tr>
+                    <td> <%= prod.name %></td>
+                    <td> <%= prod.price %> </td>
+                    <td> <%= prod.description %> </td>
+                    <td><%= link_to "Delete", product_path(prod.id), class: 'btn btn-danger', data: {confirm:'Desea eliminar este registro?', method: :delete} %></td>
+                </tr> 
+            <% end %>
+        </tbody>
+    </table>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-lg-12">
+    <%= render 'new' %>
+</div>
+</div>

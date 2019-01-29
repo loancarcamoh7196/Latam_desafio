@@ -1,0 +1,26 @@
+
+<div class="form-group">
+    <%= form_with model: @product, local: true do |f|  %>
+        <div class="row">
+            <div class="col-lg-6">
+                <%= f.label :name, "Name" %>
+                <%= f.text_field :name, class: 'form-control' %>
+            </div>
+
+            <div class="col-lg-6">
+                <%= f.label :price, "Price" %>
+                <%= f.number_field :price, class:'form-control' %>
+            </div>
+
+            <div class="col-lg-12">
+                <%= f.label :description, "Description" %>
+                <%= f.text_area :description, class:'form-control' %>
+            </div>
+
+            <div class="form-actions">
+                <%= f.submit "Submit", disable_with: 'Submiting...', class:'btn btn-success mb-6' %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
