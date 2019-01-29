@@ -1,0 +1,27 @@
+<h1>Formulario</h1>
+
+<%= form_with scope:@sale, url: 'sales', local: true do |f| %>
+    
+    <div>
+        <%= f.label :detail, "detail" %>
+        <%= f.text_area :detail %>
+    </div>
+
+    <div>
+        <%= f.label :category, "category" %>
+        <%= f.text_field :category %>
+    </div>
+
+    <div>
+        <%= f.label :value, "value" %>
+        <%= f.number_field :value %>
+    </div>
+
+    <div>
+        <%= f.label :tax, "excent tax" %>
+        <%= f.check_box :tax %>
+    </div>
+    <div>
+        <%= f.submit "Submit", disable_with: 'Submiting...' %>
+    </div>
+<% end %>
